@@ -1,60 +1,63 @@
 {% extends 'base.html' %}
 {% block body %}
 <style>
-	#content {
+    #content {
         margin: 10px auto 10px auto; /*控制方框之間的空隙。上右下左 or 左右_上下*/
-		padding: 20px;
-}
-	h2 {
-		font-size: 150%;
-	}
-	table {
-		margin-left:auto;
-		margin-right:auto;
-	}
-	th {
-		padding: 15px 15px;
-	}
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 150%;
+    }
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th {
+        padding: 15px 15px;
+    }
 </style>
 <div id="content">
-				<!-- List of uploaded documents -->
-				<h2>詳細資料</h2>
-				
-				{% if r %}
-				<table>
-					<thead>
-					
-					<tr>
-						<th>測站代碼</th>
-						<th>測站名稱</th>
-						<th>所在縣市</th>
-						<th>測項名稱</th>
-						<th>數值</th>
-						<th>測項單位</th>
-						<th>監測日期</th>
-					</tr>
-					</thead>
-	
-					{% for data in r %}
-					<tbody>				
-						<tr>
-							<td>{{data.0}}</td>
-							<td>{{data.1}}</td>
-							<td>{{data.2}}</td>
-							<td>{{data.4}}</td>
-							<td>{{data.8}}</td>
-							<td>{{data.6}}</td>
-							<td>{{data.7}}</td>
-							
-						</tr>
-					</tbody>
-					{% endfor %}
-					
-				</table> 
-				{% else %}
-					<p>No files</p>
-				{% endif %}
-				
-			</div>
+    <!-- List of uploaded documents -->
+    <h2>詳細資料</h2>
+
+    {% if r %}
+    <table>
+        <thead>
+
+        <tr>
+            <th>測站代碼</th>
+            <th>測站名稱</th>
+            <th>所在縣市</th>
+            <th>測項名稱</th>
+            <th>數值</th>
+            <th>測項單位</th>
+            <th>監測日期</th>
+        </tr>
+        </thead>
+
+        {% for data in r %}
+        <tbody>
+        <tr>
+            <td>{{data.0}}</td>
+            <td>{{data.1}}</td>
+            <td>{{data.2}}</td>
+            <td>{{data.4}}</td>
+            <td>{{data.8}}</td>
+            <td>{{data.6}}</td>
+            <td>{{data.7}}</td>
+
+        </tr>
+        </tbody>
+        {% endfor %}
+
+    </table>
+    {% else %}
+    <p>No files</p>
+    {% endif %}
+
+</div>
 
 {% endblock %}

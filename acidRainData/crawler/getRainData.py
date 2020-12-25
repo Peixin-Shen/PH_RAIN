@@ -12,7 +12,7 @@ c = conn.cursor()
 # print(c)
 conn.set_character_set('utf8')
 # print(conn)
-sql = "DELETE FROM hourly_data"
+sql = "DELETE FROM hourly_data" #刪除舊資料
 try:
     c.execute(sql)
     conn.commit()
@@ -36,10 +36,3 @@ for i in list_of_dicts["records"]:
         conn.commit()
     except MySQLdb.Error as e:
         print("Mysql Error %d: %s" % (e.args[0], e.args[1]))
-
-    # sql = "DELETE FROM hourly_data WHERE ItemName!='酸雨'"
-    # try:
-    #     c.execute(sql)
-    #     conn.commit()
-    # except MySQLdb.Error as e:
-    #     print("Mysql Error %d: %s" % (e.args[0], e.args[1]))
