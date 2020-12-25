@@ -1,0 +1,23 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>各地區雨水即時檢測值</title>
+
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/homepage.css'%}">
+</head>
+<body>
+<div id="page">
+    <h1>各地區雨水即時檢測值</h1>
+    <nav>
+        <ul id="navigation">
+            <li><a href="/ph_rain/">雨水ph值</a></li>
+            <li><a href="/rainfall/">降雨量</a></li>
+            <li><a href="/rain_cond/">雨水導電度</a></li>
+        </ul>
+    </nav>
+    {% block body %}{% endblock %}
+</div>
+</body>
+</html>

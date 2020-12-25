@@ -1,0 +1,90 @@
+body {
+    font-size: 90%;
+    font-family: "Noto Serif CJK TC", Courier, monospace;
+    letter-spacing: 0.15em;
+    background-color: #ffffff;
+}
+
+#page {
+    max-width: 940px; /*當瀏覽器視窗很大時方框最多放大到哪個尺寸*/
+    min-width: 720px;
+    width: 940px;
+    margin: 10px auto 10px auto; /*控制方框之間的空隙。上右下左 or 左右_上下*/
+    padding: 20px; /* 指定元素內容和邊框應保持多少距離，有利閱讀 */
+    /*border: 4px double #000; !* 同時為4邊加上指定邊框 *!*/
+    background-color: #ffffff;
+}
+
+
+h1 {
+    font-size: 200%;
+    text-align: center;
+}
+
+ul {
+    width: 940px;
+    padding: 20px;
+    margin: 0px auto 25px auto;
+    border-top: 2px solid #000; /* 只有上面要加邊框，寬度是2px，黑色 */
+    /*border-bottom: 2px solid #000; !* 只有上面要加邊框，寬度是2px，黑色 *!*/
+    text-align: center; /* 讓文字置中 */
+}
+
+li {
+    display: inline; /* 讓清單變成一行 */
+    margin: 0px 20px;
+}
+p {
+    text-align: center;
+    /*width: 730px;*/
+    word-break: break-all;
+    margin: 20px auto 20px auto;
+    font-weight: normal;
+}
+
+a {
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 18px 5px 18px;
+}
+
+a:hover { /*a.on*/
+    color: #cc3300;
+    background-color: #ffffff;
+}
+
+
+nav, footer {
+    clear: both;
+    color: #2b542c;
+    /*background-color: #aeaca8;*/
+    height: 30px;
+}
+
+aside {
+    width: 230px;
+    float: left;
+    padding: 0px 0px 0px 50px;
+    margin: 20px auto 0px auto;
+}
+
+aside section a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+aside section a:hover {
+    color: #985d6a;
+    background-color: #efefef;
+}
+
+a {
+    color: #de6581;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
